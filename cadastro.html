@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - SOS Patas</title>
+    <meta name="description" content="Faça seu cadastro para ser um voluntário, doador ou adotante na SOS Patas.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Voluntários e Doadores</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nossos Animais e Projetos</a></li>
+                <li><a href="cadastro.html">Cadastre-se e Doe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-cadastro">
+            <h2>Seu Cadastro na SOS Patas</h2>
+            <p>Preencha seus dados para fazer uma doação ou se candidatar ao voluntariado.</p>
+            
+            <form action="/submit-cadastro" method="POST">
+                
+                <fieldset>
+                    <legend>Dados Pessoais Obrigatórios</legend>
+                    
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required 
+                               aria-describedby="dica-nome" placeholder="Seu nome completo">
+                        <small id="dica-nome">Nome para certificados e contato.</small>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                    </div>
+
+                    <div>
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required>
+                    </div>
+
+                    <div>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" 
+                               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00">
+                        </div>
+                    
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required 
+                               placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{4,5}-\d{4}" 
+                               title="Formato: (00) 0000-0000 ou (00) 00000-0000">
+                        </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço e Localização</legend>
+                    
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" required placeholder="00000-000" 
+                               pattern="\d{5}-\d{3}" title="Formato: 00000-000">
+                        </div>
+                    
+                    <div>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" required placeholder="Rua, número e complemento">
+                    </div>
+                    
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione um Estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="GO">Goiás</option>
+                            <option value="SP">São Paulo</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Motivação</legend>
+                    <div>
+                        <label>Qual seu interesse principal?</label>
+                        <div>
+                            <input type="radio" id="doador" name="interesse" value="doador" required>
+                            <label for="doador">Sou Doador</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="voluntario" name="interesse" value="voluntario">
+                            <label for="voluntario">Sou Voluntário</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="adotante" name="interesse" value="adotante">
+                            <label for="adotante">Sou Adotante</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit" class="botao-principal">Enviar Cadastro</button>
+                    </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SOS Patas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
