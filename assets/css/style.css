@@ -159,7 +159,7 @@ p {
    Imagens
    ========================================================================== */
 img {
-    max-width: 100%; /* Garante que a imagem nunca seja maior que seu container */
+    max-width: 80%; /* Garante que a imagem nunca seja maior que seu container */
     height: auto;    /* Mantém a proporção da imagem ao redimensionar */
     display: block;
     margin: 1.5rem 0;
@@ -456,13 +456,8 @@ footer div a:hover {
     }
 }
 
-/* Funções para cores (se você usar pré-processadores como SASS ou LESS)
-   Para CSS puro, essas funções darken() não funcionam diretamente.
-   Você teria que calcular as cores manualmente ou usar variáveis CSS com HSL.
-   Por enquanto, deixei como está e você pode ajustar manualmente.
-*/
-/*
+
+
 @function darken($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
-*/
