@@ -456,12 +456,8 @@ footer div a:hover {
     }
 }
 
-/* Funções para cores (se você usar pré-processadores como SASS ou LESS)
-   Para CSS puro, essas funções darken() não funcionam diretamente.
-   Você teria que calcular as cores manualmente ou usar variáveis CSS com HSL.
-   Por enquanto, deixei como está e você pode ajustar manualmente.
-*/
-/*
+
+
 @function darken($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
