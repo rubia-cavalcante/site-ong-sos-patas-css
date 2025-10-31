@@ -3,61 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patas - ONG de Resgate e Adoção de Animais</title>
-    <meta name="description" content="SOS Patas: Conheça nossa missão de resgatar, cuidar e encontrar um lar para animais abandonados. Ajude com doações ou voluntariado.">
-    <link rel="canonical" href="https://www.sospastas.org">
-
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>SOS Patas | Resgate e Adoção Responsável</title>
+    <meta name="description" content="ONG SOS Patas: Dedicada ao resgate, reabilitação e adoção de animais abandonados.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
-<body>
+<body class="menu-closed"> 
+    
     <header>
-        <h1>SOS PATAS</h1>
-        <nav aria-label="Navegação principal">
+        <h1><a href="index.html">SOS Patas</a></h1>
+
+        <button class="menu-toggle" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir Menu">
+            <span class="hamburguer-icon">&#9776;</span> 
+        </button>
+        
+        <nav id="menu-principal" aria-label="Menu Principal da ONG">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Nossos Animais e Projetos</a></li>
-                <li><a href="cadastro.html">Cadastre-se e Doe</a></li>
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                
+                <li class="dropdown" tabindex="0">
+                    <a href="projetos.html" aria-expanded="false" aria-haspopup="true" class="nav-link">Projetos ▼</a>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#adote" class="nav-link-sub">Adote um Pet</a></li>
+                        <li><a href="projetos.html#voluntariado" class="nav-link-sub">Seja Voluntário</a></li>
+                        <li><a href="projetos.html#doacoes" class="nav-link-sub">Doe Agora</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li> 
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="missao">
-            <h2>Nossa Missão</h2>
-            <p>Resgatar, reabilitar e promover a adoção responsável de animais abandonados, garantindo uma vida digna e cheia de amor.</p>
-            <img 
-        src="assets/imagens/cachorro-feliz.jpg" 
-        alt="Cachorro Vira-lata sorrindo em um gramado, simbolizando a alegria após o resgate."
-        loading="lazy">
-    
-        </section>
-
-        <section id="valores">
-            <h2>Valores SOS PATAS</h2>
-            <ul>
-                <li>Compaixão</li>
-                <li>Transparência</li>
-                <li>Responsabilidade Social</li>
-            </ul>
-        </section>
-
-        <section id="contato" class="area-contato">
-            <h2>Fale Conosco</h2>
-            <address>
-                <p>Email: <a href="mailto:contato@sospastas.org">contato@sospastas.org</a></p>
-                <p>Telefone: (62) 98374-3509</p>
-                <p>Endereço: Avenida Goiás, 123 - Goianésia - GO</p>
-            </address>
+    <main id="spa-container">
+        <section id="institucional">
+            <h2>Bem-vindo(a) à SOS Patas!</h2>
+            <p>Somos uma organização não governamental dedicada ao resgate, reabilitação e promoção da adoção responsável de animais.</p>
+            <a href="projetos.html" class="botao-principal nav-link">Ver Animais para Adoção</a>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; 2025 SOS Patas. Todos os direitos reservados. | <a href="#contato">Contato</a></p>
-        <div>
-            <a href="#" aria-label="Facebook da ONG">Facebook</a>
-            <a href="#" aria-label="Instagram da ONG">Instagram</a>
+        <div class="container">
+            <p>&copy; 2025 SOS Patas. Todos os direitos reservados.</p>
+            <nav aria-label="Links Sociais">
+                <a href="#facebook" title="Facebook">FB</a>
+                <a href="#instagram" title="Instagram">IG</a>
+            </nav>
         </div>
     </footer>
+
+    <template id="projeto-template">
+        <article class="projeto-card">
+            <img class="card-imagem" src="" alt="Imagem do Projeto" loading="lazy">
+            <div class="card-info">
+                <h3 class="card-titulo"></h3>
+                <p class="card-descricao"></p>
+                <span class="card-badge"></span>
+            </div>
+            <a href="#" class="botao-principal">Ver Detalhes</a>
+        </article>
+    </template>
 
     <script src="assets/js/script.js"></script>
 </body>
